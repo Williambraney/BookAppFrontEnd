@@ -1,0 +1,12 @@
+{
+    "data": {
+        "id": 1,
+        "created_at": "2021-01-01",
+        "updated_at": "2021-02-02",
+        "name": "J.R.R.Tolkien",
+        "image_name": "an Image of a book",
+        "image_path": "/public/resources/data/images/image_of_book_1.jpg",
+        "bio": "text content",
+        "quotes": ""
+    }
+}
