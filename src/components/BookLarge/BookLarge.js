@@ -1,4 +1,3 @@
-import { forwardRef, Component } from "react";
 import HTMLFlipBook from "react-pageflip"
 import TestPage from "../TestPage"
 import test from "../../assets/test.png"
