@@ -1,0 +1,44 @@
+.image {
+
+    /* text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem; */
+
+}
+.card{
+    /* width: 5rem; */
+    text-align: center;
+    width: 22%;
+    border: none;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.title {
+    font-size: 0.6rem;
+    font-weight: bold;
+
+}
+.card-title {
+    margin-bottom: 0;
+}
+.card-body {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: #fef3e7;
+}
+
+.text {
+    font-size: 0.4rem;
+    /* width: 11rem; */
+    text-align: center; 
+    font-weight: bold;
+    padding: 0;
+}
+
+.Button {
+    /* background-color: col; */
+}
