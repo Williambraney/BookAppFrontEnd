@@ -11,27 +11,29 @@ const Nav = () => {
         justifyContent: "space-around",
         backgroundColor: colors.darkGrey,
         color: colors["5beige"],
-        marginBottom: "1rem",
         width: 100 + "vw",
-        padding: .4 + "rem"
+        maxWidth: 100 + "%",
+        paddingTop: .4 + "rem",
+        paddingBottom: .4 + "rem"
     }
 
     const buttonStyle = {
         backgroundColor: "Transparent",
         fontSize: 1.7 + "rem",
-        border: "none",        
+        border: "none",
     }
 
     const logoStyle = {
         display: "flex",
-        alignItems: "center",        
+        alignItems: "center",
         backgroundColor: "white",
         width: 100 + "vw",
+        maxWidth: 100 + "%",
         height: 25 + "px",
         fontSize: 1.2 + "rem",
         fontWeight: "bold",
-        padding: 17 + "px",        
-
+        paddingTop: 17 + "px",
+        paddingBottom: 17 + "px",
     }
 
     const logo = {
