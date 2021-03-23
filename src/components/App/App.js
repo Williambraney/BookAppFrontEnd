@@ -1,8 +1,19 @@
+import BookLarge from "../BookLarge"
+import TestPage from "../TestPage"
+import Nav from "../Nav"
+
 const App = () => {
     return (
-        <div className="container">
-
-        </div>
+        <>
+            <Nav />
+            <div className="container">
+                <BookLarge>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                </BookLarge>
+            </div>
+        </>
     );
 }
 
