@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import BookLarge from "./BookLarge";
+import TestPage from "./TestPage";
 
 const mapStateToProps = state => {
     return {
     }
 }
-export default connect(mapStateToProps)(BookLarge);
+export default connect(mapStateToProps)(TestPage);
