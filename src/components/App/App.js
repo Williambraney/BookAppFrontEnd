@@ -12,16 +12,16 @@ const App = () => {
             <Nav />
             <Search />
             <div className="container">
-              <Pages></Pages>
-            <BookSmall />
-                <BookLarge>
-                    <TestPage></TestPage>
-                    <TestPage></TestPage>
-                    <TestPage></TestPage>
-                </BookLarge>
+                <Pages></Pages>
+                <BookSmall />
             </div>
+            <BookLarge>
+                <TestPage></TestPage>
+                <TestPage></TestPage>
+                <TestPage></TestPage>
+            </BookLarge>
         </>
-)
+    )
 };
 
 
