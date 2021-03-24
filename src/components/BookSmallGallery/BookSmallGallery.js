@@ -19,27 +19,25 @@ const BookSmallGallery = ({ books }) => {
     const [displayBook, setDisplayBook] = useState({});
     const [productIndex, setProductIndex] = useState(0);
 
-    const handleSelect = (e, book) => {
-        setDisplayBook(book);
-        setToggler(!toggler);
-    }
-
     return (
         <>
             <div style={{ display: "flex" }}>
-                {books.map((book, index) => (
-                    <div onClick={() => handleSelect(book)} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
-                        <Card className="card">
-                            <Card.Img className="image" variant="top" src={Misery7} />
-                            <Card.Body>
-                                <Card.Title className="title">{`${book.title}`}</Card.Title>
-                                <Card.Text className="text">{`${book.author.name}`}</Card.Text>
-                                <Card.Text className="text"><b>Genres:</b>{`${book.genre}`}</Card.Text>
-                            </Card.Body>
-                        </Card>
-                    </div>
+                {books.map((book, index) => {
 
-                ))
+                    let thisBook = book;
+                    return (
+                        <div onClick={() => setToggler(!toggler)} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
+                            <Card className="card">
+                                <Card.Img className="image" variant="top" src={Misery7} />
+                                <Card.Body>
+                                    <Card.Title className="title">{`${book.title}`}</Card.Title>
+                                    <Card.Text className="text">{`${book.author.name}`}</Card.Text>
+                                    <Card.Text className="text"><b>Genres:</b>{`${book.genre}`}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </div>)
+
+                })
                 }
             </div>
             <FsLightbox

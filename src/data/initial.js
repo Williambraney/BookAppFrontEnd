@@ -1,5 +1,6 @@
 const initial = {   
     loaded: false, 
+    displayBook: {},
     book: {},
     author: {},
     books: [],
