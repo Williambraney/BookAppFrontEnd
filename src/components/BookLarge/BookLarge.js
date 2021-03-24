@@ -5,6 +5,9 @@ import OpenBook from "../../assets/OpenBook.jpg";
 import { Row, Col, Container } from "react-bootstrap"
 
 
+import TestPage from "../TestPage"
+
+
 const BookLarge = () => {
 
     const TestPage = forwardRef((props, ref) => {
