@@ -16,6 +16,15 @@ div {
     border: none;
 }
 
+@media screen and (max-width: 500px) {
+    .cardContainer {
+        font-size: 0.6rem;
+    }
+    Card.title {
+        font-size: 0.8rem;
+    }
+}
+
 .cardContainer {
     display: flex;
     justify-content: center;
