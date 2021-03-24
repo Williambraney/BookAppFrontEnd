@@ -1,4 +1,5 @@
-const initial = {
+const initial = {   
+    loaded: false, 
     book: {},
     author: {},
     books: [],

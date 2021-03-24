@@ -7,7 +7,6 @@ import { Row, Col, Container } from "react-bootstrap"
 
 import TestPage from "../TestPage"
 
-
 const BookLarge = () => {
 
     const TestPage = forwardRef((props, ref) => {
@@ -48,7 +47,7 @@ const BookLarge = () => {
                     <Container fluid="md" style={{ width: 80 + "%" }}>
                         <Row>
                             <Col>
-                                <p className="type">Type:</p>
+                                <p className="type">Type: </p>
                                 <p className="binding">Binding:</p>
                                 <p className="publisher">Publisher:</p>
                             </Col>
@@ -78,7 +77,7 @@ const BookLarge = () => {
         <div style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",            
+            alignItems: "center",
         }}>
             <HTMLFlipBook width={500} height={693}>
                 <TestPage number="1" />

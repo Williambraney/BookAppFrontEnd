@@ -1,3 +1,4 @@
+import { Component } from "react"
 import BookSmall from "../BookSmall/BookSmall"
 import "./Gallery.css"
 import { Card } from "react-bootstrap";
@@ -5,33 +6,50 @@ import Misery7 from ".././BookSmall/Misery7.jpg"
 import ".././BookSmall/BookSmalls.css";
 import colors from "../../colors.json"
 import book from "../../book.json"
+import { useState } from "react";
+import FsLightbox from 'fslightbox-react';
+import BookLarge from '../BookLarge';
 
 const map = book.data.genre.map(genre => (genre));
 var mapString = map.join(', ');
 
+const BookSmallGallery = ({ books }) => {
 
-const BookSmallGallery = () => {
-    const Books = [book, book, book, book]
-    return ( 
+    const [toggler, setToggler] = useState(false);
+    const [displayBook, setDisplayBook] = useState({});
+    const [productIndex, setProductIndex] = useState(0);
+
+    const handleSelect = (e, book) => {
+        setDisplayBook(book);
+        setToggler(!toggler);
+    }
+
+    return (
         <>
-        <div style={{display: "flex"}}>
-        {Books.map((book, index) => (
-            <div className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
-                <Card className="card">
-                    <Card.Img className="image" variant="top" src={Misery7} />
-                    <Card.Body>
-                        <Card.Title className="title">{book.data.title}</Card.Title>
-                        <Card.Text className="text">By {book.data.author}</Card.Text>
-                        <Card.Text className="text"><b>Genres:</b> {mapString} </Card.Text>
-                    </Card.Body>
-                </Card>
+            <div style={{ display: "flex" }}>
+                {books.map((book, index) => (
+                    <div onClick={() => handleSelect(book)} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
+                        <Card className="card">
+                            <Card.Img className="image" variant="top" src={Misery7} />
+                            <Card.Body>
+                                <Card.Title className="title">{`${book.title}`}</Card.Title>
+                                <Card.Text className="text">{`${book.author.name}`}</Card.Text>
+                                <Card.Text className="text"><b>Genres:</b>{`${book.genre}`}</Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </div>
+
+                ))
+                }
             </div>
-
-))
-
-
-}
-        </div>
+            <FsLightbox
+                toggler={toggler}
+                sources={[
+                    <div style={{ width: "1100px", height: "800px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                        <BookLarge book={displayBook} />
+                    </div>
+                ]}
+            />
         </>
     )
 };

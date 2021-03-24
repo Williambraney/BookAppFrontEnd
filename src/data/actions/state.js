@@ -1,25 +1,30 @@
 export const loadBook = (data) => {
     return {
-        book: data,
-        type: "LOAD_BOOK"
+        type: "LOAD_BOOK",
+        book: data
     }
 }
 export const loadBooks = (data) => {
     return {
-        books: data,
-        type: "LOAD_BOOKS"
+        type: "LOAD_BOOKS",
+        books: data
     }
 }
 export const loadAuthor = (data) => {
     return {
-        author: data,
-        type: "LOAD_AUTHOR"
+        type: "LOAD_AUTHOR",
+        author: data
     }
 }
 export const loadAuthors = (data) => {
     return {
-        authors: data,
-        type: "LOAD_AUTHORS"
+        type: "LOAD_AUTHORS",
+        authors: data
+    }
+}
+export const setLB = () => {
+    return {
+        type: "SET_LIGHTBOX",
     }
 }
 

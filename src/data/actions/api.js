@@ -12,7 +12,7 @@ export const getBook = id => {
 export const getBooks = () => {
     return (dispatch) => {
         axios.get('/books').then(({ data }) => {
-            dispatch(loadBooks(data.data))
+            dispatch(loadBooks([...data.data]))
         })
     }
 }
