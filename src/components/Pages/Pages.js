@@ -1,6 +1,9 @@
 import colors from '../../colors.json'
+import authors from '../../authors.json'
+import books from '../../books.json'
 
-const Pages = () => {
+
+const Pages = ({ author, synopsis, title, type, binding, pages, publisher, publication_date, rrp, getBooks }) => {
     
 
     return (
@@ -20,7 +23,16 @@ const Pages = () => {
             }>
                 
                 <div>
-                    <p className="header">PAGE HEADER - 1</p>
+                    <p className="header"
+                       style={
+                           {
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column"
+                           }
+                       }
+                    >PAGE HEADER - 1</p>
 
                     {/* page-3 book cover image*/}
                     <figure className="img--book">
@@ -33,20 +45,28 @@ const Pages = () => {
                         width: "60%",
                     }
                 }>
-                    <p className="type">Type:</p>
-                    <p className="binding">Binding:</p>
-                    <p className="publisher">Publisher:</p>
-                    <p className="pages">Pages:</p>
-                    <p className="pubdate">Publication Date:</p>
-                    <p className="rrp">RRP:</p>
+                    <p className="type">Type:&nbsp;{
+                        books.data.books[0].type
+                    }</p>
+                    <p className="binding">Binding:&nbsp;{
+                        books.data.books[0].binding
+                    }</p>
+                    <p className="publisher">Publisher:&nbsp;{
+                        books.data.books[0].publisher
+                    }</p>
+                    <p className="pages">Pages:&nbsp;{
+                        books.data.books[0].pages
+                    }</p>
+                    <p className="pubdate">Publication Date:&nbsp;{
+                        books.data.books[0].publication_date
+                    }</p>
+                    <p className="rrp">RRP:&nbsp;{
+                        books.data.books[0].rrp
+                    }</p>
                 </div>
 
                
-                    <p className="footer" style={
-                        {
-                            paddingLeft: "5px",
-                        }
-                    }>1</p>
+                    <p className="footer">1</p>
             </div>
 
 
@@ -65,30 +85,30 @@ const Pages = () => {
                         {
                             fontSize: "25px",
                         }
-                    }>Harry Potter and the Chamber of Secrets</p>
+                    }>{
+                        books.data.books[0].title
+                    }</p>
 
                     <p className="author-name" 
                        style={
                             {
                                 color: colors.darkGrey,
                             }
-                    }>J K Rowling</p>
+                    }>{
+                        books.data.books[0].author
+                    }</p>
 
-                    <p className="review">Review
-                    I've yet to meet a ten-year-old who hasn't been entranced by its witty, complex plot and the character of the eponymous Harry ― Independent
-
-                    Spellbinding, enchanting, bewitching stuff ― Mirror
-
-                    Teachers say a chapter can silence the most rowdy of classes ― Guardian
-
-                    One of the greatest literary adventures of modern times ― Sunday Telegraph
-
-                    The Harry Potter stories will join that small group of children's books which are read and reread into adulthood ― TLS
-                    From the Back Cover
-                    Harry Potter's summer has included the worst birthday ever, doomy warnings from a house-elf called Dobby, and rescue from the Dursleys by his friend Ron Weasley in a magical flying car! Back at Hogwarts School of Witchcraft and Wizardry for his second year, Harry hears strange whispers echo through empty corridors - and then the attacks start. Students are found as though turned to stone ...Dobby's sinister predictions seem to be coming true. These new editions of the classic and internationally bestselling, multi-award-winning series feature instantly pick-up-able new jackets by Jonny Duddle, with huge child appeal, to bring Harry Potter to the next generation of readers. It's time to PASS THE MAGIC ON ...</p>
-                    <p className="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                    </p>
-             
+                    <p className="review">{
+                        books.data.books[0].synopsis
+                    }</p>
+                    <p className="footer" style={
+                        {
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column"
+                        }
+                    }>2</p>
             </div>
 
 
@@ -116,7 +136,7 @@ const Pages = () => {
                                 }    
                         }/>
 
-                        <p className="" 
+                        <p className="author-n" 
                            style={
                             {
                                 fontSize: "40px",
@@ -124,6 +144,16 @@ const Pages = () => {
                                 marginLeft: "20px"
                             }
                             }>J.K. Rowling</p>
+
+                        <p className="quote" 
+                           style={
+                            {
+                                fontSize: "12px",
+                                marginTop: "200px",
+                                marginLeft: "-130px",
+                                fontFamily: "Arial-ItalicMT",
+                            }
+                            }>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world.</p>
                     </div>    
                    
 
@@ -135,6 +165,15 @@ const Pages = () => {
                         }
                     }>About the Author
                     J.K. Rowling is best known as the author of the seven Harry Potter books, which were published between 1997 and 2007. The enduringly popular adventures of Harry, Ron and Hermione have gone on to sell over 500 million copies, be translated into over 80 languages and made into eight blockbuster films. Alongside the Harry Potter series, she also wrote three short companion volumes for charity: Quidditch Through the Ages and Fantastic Beasts and Where to Find Them, in aid of Comic Relief and Lumos, and The Tales of Beedle the Bard, in aid of Lumos. J.K. Rowling collaborated with playwright Jack Thorne and director John Tiffany to continue Harry's story in a stage play, Harry Potter and the Cursed Child, which opened in London in 2016 and is now playing worldwide. In the same year, she made her debut as a screenwriter with the film Fantastic Beasts and Where to Find Them, the first in a series featuring Magizoologist Newt Scamander, which was inspired by the original companion volume. J.K.</p>
+
+                    <p className="footer" style={
+                           {
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column"
+                           }
+                       }>3</p>
                 
             </div> 
                 {/* page-4 author bio --------------------------------------------------*/}
@@ -149,7 +188,7 @@ const Pages = () => {
                      <p className="author-name" 
                        style={
                             {
-                                color: colors.darkGrey,
+                                fontSize: "40px",
                             }
                     }>Biography</p>
 
@@ -165,8 +204,16 @@ const Pages = () => {
 
                     Fans of Fantastic Beasts and Harry Potter can find out more at www.wizardingworld.com.
 
-                    J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 2012 and adapted for television in 2015. Under the pseudonym Robert Galbraith, she is the author of the highly acclaimed ‘Strike’ crime series, featuring private detective Cormoran Strike and his partner Robin Ellacott. The first of these, The Cuckoo’s Calling, was published to critical acclaim in 2013, at first without its author’s true identity being known. The Silkworm followed in 2014, Career of Evil in 2015 and Lethal White in 2018. 
+                    J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 2012 and adapted for television in 2015. Under the pseudonym Robert Galbraith, she is the author of the highly acclaimed ‘Strike’ crime series, featuring private detective Cormoran Strike and his partner Robin Ellacott. The first of these, The Cuckoo’s Calling, was published to critical acclaim in 2013, at first without its author’s true identity being known. 
                     </p>
+                    <p className="footer" style={
+                           {
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            flexDirection: "column"
+                           }
+                       }>4</p>
                 </div>
             
         </>
