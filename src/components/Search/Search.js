@@ -3,6 +3,7 @@ import orangeBackground from "../../assets/orange-watercolor.png"
 import hoppers from "../../assets/hoppers.png"
 import { Button, Form } from "react-bootstrap"
 import colors from "../../colors.json"
+import fireVideo from "../FireVideo/FireVideo";
 
 const Search = () => {
 

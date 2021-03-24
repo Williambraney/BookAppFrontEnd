@@ -5,6 +5,7 @@ import TestPage from "../TestPage"
 import Nav from "../Nav"
 import Search from "../Search"
 import Pages from '../Pages'
+import FireVideo from "../FireVideo/FireVideo"
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 <TestPage></TestPage>
             </BookLarge>
                 <BookSmallGallery />
+                <FireVideo />
         </>
     )
 };
