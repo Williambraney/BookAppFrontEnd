@@ -1,7 +1,6 @@
 import { forwardRef, Component } from "react";
 import HTMLFlipBook from "react-pageflip";
 import OpenBook from "../../assets/OpenBook.jpg";
-
 import { Row, Col, Container } from "react-bootstrap"
 
 

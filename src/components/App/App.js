@@ -4,6 +4,7 @@ import TestPage from "../TestPage"
 import Nav from "../Nav"
 import Search from "../Search"
 import Pages from '../Pages'
+import AnimationTestPage from '../AnimationTestPage'
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
                 <TestPage></TestPage>
                 <TestPage></TestPage>
                 <TestPage></TestPage>
-            </BookLarge>
+            </BookLarge>                 
         </>
     )
 };
