@@ -13,7 +13,6 @@ const BookSmall = () => {
                 <Card.Title className="title">Misery</Card.Title>
                 <Card.Text className="text">By Stephen King</Card.Text>
                 <Card.Text className="text">Genre: Horror Non-Fiction Thriller</Card.Text>
-                {/* <Button style={{backgroundColor: colors.darkGrey}} className="Button" variant="primary">Find Out More</Button> */}
             </Card.Body>
         </Card>
                 <Card className="card">
@@ -22,7 +21,6 @@ const BookSmall = () => {
                 <Card.Title className="title">Misery</Card.Title>
                 <Card.Text className="text">By Stephen King</Card.Text>
                 <Card.Text className="text">Genre: Horror Non-Fiction Thriller</Card.Text>
-                {/* <Button style={{backgroundColor: colors.darkGrey}} className="Button" variant="primary">Find Out More</Button> */}
             </Card.Body>
         </Card>
                 <Card className="card">
@@ -31,7 +29,6 @@ const BookSmall = () => {
                 <Card.Title className="title">Misery</Card.Title>
                 <Card.Text className="text">By Stephen King</Card.Text>
                 <Card.Text className="text">Genre: Horror Non-Fiction Thriller</Card.Text>
-                {/* <Button style={{backgroundColor: colors.darkGrey}} className="Button" variant="primary">Find Out More</Button> */}
             </Card.Body>
         </Card>
                 <Card className="card">
