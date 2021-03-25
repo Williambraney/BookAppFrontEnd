@@ -12,13 +12,13 @@ const Search = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "white",
+        // backgroundColor: "white",
         width: 100 + "vw",
         maxWidth: 100 + "%",
         height: 300 + "px",
-        backgroundImage: `url(${orangeBackground})`,
+        // backgroundImage: `url(${orangeBackground})`,
         backgroundSize: 100 + "%",
-        backgroundRepeat: "cover"
+        // backgroundRepeat: "cover"
     }
 
     const searchBar = {
@@ -39,6 +39,7 @@ const Search = () => {
 
     return (
         <div style={searchWrapper}>
+            <fireVideo />
             <Form style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." />

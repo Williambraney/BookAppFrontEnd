@@ -22,7 +22,7 @@ const App = () => {
                 <TestPage></TestPage>
             </BookLarge>
                 <BookSmallGallery />
-                <FireVideo />
+                <FireVideo  />
         </>
     )
 };
