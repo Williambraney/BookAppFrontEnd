@@ -20,7 +20,7 @@ export const getBooks = () => {
 export const searchBooks = (searchTerm) => {
     console.log(searchTerm);
     return (dispatch) => {
-        axios.get(`/books/search/"${searchTerm}"`).then(({ data }) => {
+        axios.get(`/books/search/${searchTerm}`).then(({ data }) => {
             console.log(data);
             dispatch(loadBooks([...data.data]))
         })

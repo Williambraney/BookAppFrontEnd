@@ -28,7 +28,10 @@ const BookSmallGallery = ({ books }) => {
 
                     let thisBook = book;
                     return (
-                        <div onClick={() => setSelectedBook(index)} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
+                        <div onClick={() => {
+                            setSelectedBook(index)
+                            setToggler(!toggler)
+                        }} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
                             <Card className="card">
                                 <Card.Img className="image" variant="top" src={Misery7} />
                                 <Card.Body>
@@ -41,11 +44,12 @@ const BookSmallGallery = ({ books }) => {
 
                 })
                 }
+                
             </div>
             <FsLightbox
                 // toggler = bookindex < -1
                 // using state outside of map to store index, then pass in the book to booklarge by index
-                toggler={selectedBook > "-1"}
+                toggler={toggler}
                 sources={[
                     <div style={{ width: "1100px", height: "800px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <BookLarge book={books[selectedBook]} />

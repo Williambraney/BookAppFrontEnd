@@ -10,9 +10,10 @@ const Search = ({ searchBooks, searchTerm }) => {
 
     let [searchWord, setSearchTerm] = useState("");
 
-    const handleSearchTerm = (e) => {        
-        setSearchTerm(e.currentTarget.value);
-        searchBooks(searchWord);
+    const handleSearchTerm = (e) => {
+        const newValue = e.currentTarget.value;
+        setSearchTerm(newValue);
+        searchBooks(newValue);
     };
 
     const searchWrapper = {
