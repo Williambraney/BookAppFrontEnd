@@ -3,7 +3,6 @@ import orangeBackground from "../../assets/orange-watercolor.png"
 import hoppers from "../../assets/hoppers.png"
 import { Button, Form } from "react-bootstrap"
 import colors from "../../colors.json"
-import fireVideo from "../FireVideo/FireVideo";
 
 const Search = () => {
 
@@ -12,13 +11,13 @@ const Search = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "white",
+        // backgroundColor: "white",
         width: 100 + "vw",
         maxWidth: 100 + "%",
         height: 300 + "px",
         // backgroundImage: `url(${orangeBackground})`,
         backgroundSize: 100 + "%",
-        backgroundRepeat: "cover"
+        backgroundRepeat: "cover",
     }
 
     const searchBar = {
@@ -28,7 +27,7 @@ const Search = () => {
     const quote = {
         backgroundColor: "Transparent",
         width: 70 + "vw",
-        color: "black",
+        color: "white",
         fontSize: 1.7 + "rem",
         border: "none",
         fontFamily: "Arial-ItalicMT",
@@ -38,6 +37,12 @@ const Search = () => {
         width: 30 + "px",
     }
 
+    const authorBook = {
+        fontWeight: "bold",
+    }
+
+
+
     return (
         <div style={searchWrapper}>
             <fireVideo />
@@ -45,12 +50,12 @@ const Search = () => {
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." />
                 </Form.Group>
-                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
                     <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
-                    <Form.Text className="text-muted">
+                    <Form.Text className="text-muted" style={authorBook}>
                         by J.K. Rowling
                         </Form.Text>
-                    <Form.Text className="text-muted">
+                    <Form.Text className="text-muted" style={authorBook}>
                         Harry Potter and the Chamber of Secrets
                         </Form.Text>
                 </Form.Group>
