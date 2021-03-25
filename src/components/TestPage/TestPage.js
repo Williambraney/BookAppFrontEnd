@@ -3,6 +3,7 @@ import HTMLFlipBook from "react-pageflip"
 import test from "../../assets/test.png"
 
 const TestPage = forwardRef((props, ref) => {
+    console.log(props.book)
     return (
         <div className="shadow-lg container" ref={ref} style={
             {
