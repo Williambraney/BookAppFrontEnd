@@ -1,3 +1,7 @@
+div {
+    width: 100%
+}
+
 .image {
 
     /* text-align: center;
@@ -8,17 +12,26 @@
 .card{
     /* width: 5rem; */
     text-align: center;
-    width: 22%;
+    width: 70%;
     border: none;
+}
+
+@media screen and (max-width: 500px) {
+    .cardContainer {
+        font-size: 0.6rem;
+    }
+    Card.title {
+        font-size: 0.8rem;
+    }
 }
 
 .cardContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem;
 }
 .title {
-    font-size: 0.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
 
 }
@@ -32,13 +45,7 @@
 }
 
 .text {
-    font-size: 0.4rem;
     /* width: 11rem; */
     text-align: center; 
-    font-weight: bold;
     padding: 0;
-}
-
-.Button {
-    /* background-color: col; */
 }
