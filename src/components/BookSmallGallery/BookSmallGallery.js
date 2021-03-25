@@ -24,7 +24,7 @@ const BookSmallGallery = ({ books }) => {
 
     return (
         <>
-            <div style={{ display: "flex" }}>
+            <div className="bookGallery">
                 {books.map((book, index) => {
 
                     let thisBook = book;

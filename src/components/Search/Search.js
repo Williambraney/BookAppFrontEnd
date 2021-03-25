@@ -12,13 +12,13 @@ const Search = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // backgroundColor: "white",
+        backgroundColor: "white",
         width: 100 + "vw",
         maxWidth: 100 + "%",
         height: 300 + "px",
         // backgroundImage: `url(${orangeBackground})`,
         backgroundSize: 100 + "%",
-        // backgroundRepeat: "cover"
+        backgroundRepeat: "cover"
     }
 
     const searchBar = {
