@@ -1,17 +1,17 @@
 import { forwardRef, Component } from "react";
 import HTMLFlipBook from "react-pageflip";
 import OpenBook from "../../assets/OpenBook.jpg";
-
 import { Row, Col, Container } from "react-bootstrap"
-
-
 import TestPage from "../TestPage"
+import PagesAuthor1 from "../PagesAuthor1"
+
 
 const BookLarge = ({ book }) => {
 
-    console.log(book)
-
     const TestPage = forwardRef((props, ref) => {
+
+        if (!props.book) { return null }
+        
         return (
             <div ref={ref} style={
                 {
@@ -49,7 +49,7 @@ const BookLarge = ({ book }) => {
                     <Container fluid="md" style={{ width: 80 + "%" }}>
                         <Row>
                             <Col>
-                                <p className="type">Type: </p>
+                                <p className="type">Title: {props.book.title}</p>
                                 <p className="binding">Binding:</p>
                                 <p className="publisher">Publisher:</p>
                             </Col>
@@ -82,10 +82,10 @@ const BookLarge = ({ book }) => {
             alignItems: "center",
         }}>
             <HTMLFlipBook width={500} height={693}>
-                <TestPage number="1" />
-                <TestPage number="2" />
-                <TestPage number="3" />
-                <TestPage number="4" />
+                <TestPage number="1" book={book} />
+                <TestPage number="2" book={book} />
+                <TestPage number="3" book={book} />
+                <TestPage number="4" book={book} />
             </HTMLFlipBook>
         </div>
     );

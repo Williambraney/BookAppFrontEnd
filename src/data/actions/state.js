@@ -28,4 +28,11 @@ export const setLB = () => {
     }
 }
 
+export const setSearchTerm = (data) => {
+    return {
+        type: "SET_SEARCH_TERM",
+        searchTerm: data
+    }
+}
+
 // this sets up the action 
