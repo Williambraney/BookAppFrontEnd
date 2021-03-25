@@ -30,6 +30,7 @@ const Search = () => {
         color: "black",
         fontSize: 1.7 + "rem",
         border: "none",
+        fontFamily: "Arial-ItalicMT",
     }
 
     const logo = {
@@ -43,7 +44,7 @@ const Search = () => {
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." />
                 </Form.Group>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                    <Button style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
+                    <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
                     <Form.Text className="text-muted">
                         by J.K. Rowling
                         </Form.Text>
