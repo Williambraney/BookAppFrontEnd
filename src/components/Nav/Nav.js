@@ -2,6 +2,7 @@ import test from "../../assets/test.png"
 import hoppers from "../../assets/hoppers.png"
 import { Button } from "react-bootstrap"
 import colors from "../../colors.json"
+import './nav.css'
 
 const Nav = () => {
 
@@ -47,8 +48,8 @@ const Nav = () => {
                 <img style={logo} src={hoppers} alt="hoppers icon"></img>
             </div>
             <div style={navStyle}>
-                <Button style={buttonStyle}>Books</Button>
-                <Button style={buttonStyle}>Authors</Button>
+                <Button className="nav-button" style={buttonStyle}>Books</Button>
+                <Button className="nav-button" style={buttonStyle}>Authors</Button>
             </div>
         </>
     )
