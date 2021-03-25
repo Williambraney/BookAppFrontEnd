@@ -16,7 +16,10 @@ var mapString = map.join(', ');
 const BookSmallGallery = ({ books }) => {
 
     const [toggler, setToggler] = useState(false);
-    const [selectedBook, setSelectedBook] = useState("-1");
+    const [selectedBook, setSelectedBook] = useState(-1);
+    const [productIndex, setProductIndex] = useState(0);
+
+
 
     // setselected books
     // use js stringsearch and use -1 for no book selected, or array index for selcted
@@ -33,7 +36,10 @@ const BookSmallGallery = ({ books }) => {
                             setToggler(!toggler)
                         }} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
                             <Card className="card">
-                                <Card.Img className="image animate__slideInRight" variant="top" src={Misery7} />
+                                <Card.Img className="image" variant="top" src={book.image_path} />
+
+                               
+
                                 <Card.Body>
                                     <Card.Title className="title">{`${book.title}`}</Card.Title>
                                     <Card.Text className="text">{`${book.author.name}`}</Card.Text>

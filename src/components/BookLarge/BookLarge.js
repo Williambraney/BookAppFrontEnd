@@ -43,7 +43,7 @@ const BookLarge = ({ book }) => {
                     <p className="header">PAGE HEADER - 1</p>
 
                     <figure className="img--book">
-                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881._SY475_.jpg" alt="logo" class="logo" />
+                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881._SY475_.jpg" alt="logo" className="logo" />
                     </figure>
 
                     <Container fluid="md" style={{ width: 80 + "%" }}>

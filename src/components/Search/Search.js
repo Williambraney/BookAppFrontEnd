@@ -3,8 +3,9 @@ import orangeBackground from "../../assets/orange-watercolor.png"
 import hoppers from "../../assets/hoppers.png"
 import { Button, Form } from "react-bootstrap"
 import colors from "../../colors.json"
-import fireVideo from "../FireVideo/FireVideo";
+import FireVideo from "../FireVideo/FireVideo";
 import { useState, getState } from "react";
+
 
 const Search = ({ searchBooks, searchTerm }) => {
 
@@ -55,7 +56,7 @@ const Search = ({ searchBooks, searchTerm }) => {
 
     return (
         <div style={searchWrapper}>
-            <fireVideo />
+            <FireVideo />
             <Form style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
