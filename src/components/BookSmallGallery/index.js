@@ -4,7 +4,8 @@ import { getBooks } from "../../data/actions/api";
 
 const mapStateToProps = (state) => {
     return {
-        books: state.books
+        books: state.books,
+        authors: state.authors
     }
 }
 const mapDispatchToProps = (dispatch) => {
