@@ -7,7 +7,9 @@ import { Row, Col, Container } from "react-bootstrap"
 
 import TestPage from "../TestPage"
 
-const BookLarge = () => {
+const BookLarge = ({ book }) => {
+
+    console.log(book)
 
     const TestPage = forwardRef((props, ref) => {
         return (
