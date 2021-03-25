@@ -39,6 +39,7 @@ const Search = () => {
 
     const authorBook = {
         fontWeight: "bold",
+        color: "green"
     }
 
 
