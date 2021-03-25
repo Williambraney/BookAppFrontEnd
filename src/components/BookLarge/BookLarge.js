@@ -46,8 +46,8 @@ const BookLarge = ({ book, author }) => {
                 }>
                     <p className="header">1</p>
 
-                    <figure className="img--book">
-                        <img src={props.book.image_path} alt="logo" className="logo" />
+                    <figure className="img--book">                        
+                            <img src={process.env.PUBLIC_URL + props.book.image_path} alt="logo" className="logo" />                        
                     </figure>
 
                     <Container fluid="md" style={{ width: 80 + "%" }}>
@@ -177,7 +177,7 @@ const BookLarge = ({ book, author }) => {
                 }>
                     {/* page-3 author image*/}
                     <p style={{ position: "absolute", top: "10px", left: "10px" }}>☜ Pull here to turn the page</p>
-                    <img src={props.book.author.image_path}
+                    <img src={process.env.PUBLIC_URL + props.book.author.image_path}
                         style={
                             {
                                 height: "270px",

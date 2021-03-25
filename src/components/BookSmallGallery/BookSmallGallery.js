@@ -10,7 +10,7 @@ import { useState } from "react";
 import FsLightbox from 'fslightbox-react';
 import BookLarge from '../BookLarge';
 
-const map = book.data.genre.map( genre => (genre));
+const map = book.data.genre.map(genre => (genre));
 var mapString = map.join(', ');
 
 const BookSmallGallery = ({ books }) => {
@@ -36,7 +36,7 @@ const BookSmallGallery = ({ books }) => {
                             setToggler(!toggler)
                         }} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
                             <Card className="card">
-                                <Card.Img className="image" variant="top" src={book.image_path} />
+                                <Card.Img className="image" variant="top" src={process.env.PUBLIC_URL + book.image_path} />
 
 
 
