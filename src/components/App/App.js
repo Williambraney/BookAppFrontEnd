@@ -8,6 +8,8 @@ import Pages from '../Pages'
 import FireVideo from "../FireVideo/FireVideo"
 import LightBox from '../LightBox'
 import Loading from '../Loading'
+import Footer from '../Footer/Footer'
+
 
 
 
@@ -29,7 +31,9 @@ const App = () => {
                 <BookSmallGallery />
                 <FireVideo  />
                 <LightBox />
+                <Footer />
             </Loading>
+           
         </>
     )
 };
