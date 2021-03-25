@@ -15,7 +15,7 @@ const App = () => {
 
     return (
         <>
-            <Loading>
+            {/* <Loading> */}
                 <Nav />
                 <Search />
                 <div className="container">
@@ -29,7 +29,7 @@ const App = () => {
                 <BookSmallGallery />
                 <FireVideo  />
                 <LightBox />
-            </Loading>
+            {/* </Loading> */}
         </>
     )
 };
