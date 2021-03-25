@@ -17,6 +17,16 @@ export const getBooks = () => {
     }
 }
 
+export const searchBooks = (searchTerm) => {
+    console.log(searchTerm);
+    return (dispatch) => {
+        axios.get(`/books/search/"${searchTerm}"`).then(({ data }) => {
+            console.log(data);
+            dispatch(loadBooks([...data.data]))
+        })
+    }
+}
+
 export const getAuthor = id => {
     return (dispatch) => {
         axios.get(`/author/${id}`).then(({ data }) => {

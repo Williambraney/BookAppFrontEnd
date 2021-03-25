@@ -1,15 +1,12 @@
 import { forwardRef, Component } from "react";
 import HTMLFlipBook from "react-pageflip";
 import OpenBook from "../../assets/OpenBook.jpg";
-
 import { Row, Col, Container } from "react-bootstrap"
-
-
 import TestPage from "../TestPage"
+import PagesAuthor1 from "../PagesAuthor1"
+
 
 const BookLarge = ({ book }) => {
-
-    console.log(book)
 
     const TestPage = forwardRef((props, ref) => {
         return (

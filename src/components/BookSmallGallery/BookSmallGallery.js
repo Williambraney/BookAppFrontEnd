@@ -17,9 +17,8 @@ const BookSmallGallery = ({ books }) => {
 
     const [toggler, setToggler] = useState(false);
     const [selectedBook, setSelectedBook] = useState("-1");
-    const [productIndex, setProductIndex] = useState(0);
 
-    // setselected book
+    // setselected books
     // use js stringsearch and use -1 for no book selected, or array index for selcted
 
     return (

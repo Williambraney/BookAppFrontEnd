@@ -4,9 +4,16 @@ import hoppers from "../../assets/hoppers.png"
 import { Button, Form } from "react-bootstrap"
 import colors from "../../colors.json"
 import fireVideo from "../FireVideo/FireVideo";
+import { useState, getState } from "react";
 
-const Search = () => {
+const Search = ({ searchBooks, searchTerm }) => {
 
+    let [searchWord, setSearchTerm] = useState("");
+
+    const handleSearchTerm = (e) => {        
+        setSearchTerm(e.currentTarget.value);
+        searchBooks(searchWord);
+    };
 
     const searchWrapper = {
         display: "flex",
@@ -43,7 +50,7 @@ const Search = () => {
             <fireVideo />
             <Form style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
-                    <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." />
+                    <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                     <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
