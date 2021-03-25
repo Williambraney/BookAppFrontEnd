@@ -26,12 +26,9 @@ const App = () => {
                     <TestPage></TestPage>
                 </BookLarge>
                 <BookSmallGallery />
-<<<<<<< HEAD
                 <FireVideo  />
-=======
                 <LightBox />
             </Loading>
->>>>>>> d05921aa2949f0be2e772afae149a6b383fac975
         </>
     )
 };
