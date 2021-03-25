@@ -29,13 +29,13 @@ const BookSmallGallery = ({ books }) => {
 
                     let thisBook = book;
                     return (
-                        <div onClick={() => setSelectedBook(index)} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
+                        <div onClick={() => setSelectedBook(index)} key={index} className="cardContainer" >
                             <Card className="card">
-                                <Card.Img className="image" variant="top" src={Misery7} />
+                                <Card.Img className="image animate__slideInRight" variant="top" src={Misery7} />
                                 <Card.Body>
                                     <Card.Title className="title">{`${book.title}`}</Card.Title>
                                     <Card.Text className="text">{`${book.author.name}`}</Card.Text>
-                                    <Card.Text className="text"><b>Genres:</b>{`${book.genre}`}</Card.Text>
+                                    {/* <Card.Text className="text"><b>Genres:</b>{`${book.genre}`}</Card.Text> */}
                                 </Card.Body>
                             </Card>
                         </div>)
