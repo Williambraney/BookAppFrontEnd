@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap"
 import colors from "../../colors.json"
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({ setBookMode, setAuthorMode }) => {
 
     const navStyle = {
         display: "flex",
@@ -48,8 +48,8 @@ const Nav = () => {
                 <img style={logo} src={hoppers} alt="hoppers icon"></img>
             </div>
             <div style={navStyle}>
-                <Button className="nav-button" style={buttonStyle}>Books</Button>
-                <Button className="nav-button" style={buttonStyle}>Authors</Button>
+                <Button className="nav-button" onClick={setBookMode} style={buttonStyle}>Books</Button>
+                <Button className="nav-button" onClick={setAuthorMode} style={buttonStyle}>Authors</Button>
             </div>
         </>
     )
