@@ -7,7 +7,6 @@ import Search from "../Search"
 import Pages from '../Pages'
 import FireVideo from "../FireVideo/FireVideo"
 import LightBox from '../LightBox'
-import Loading from '../Loading'
 import Footer from '../Footer/Footer'
 
 
@@ -17,6 +16,7 @@ const App = () => {
 
     return (
         <>
+                
             <Nav />
             <Search />
             {/* <div className="container">
