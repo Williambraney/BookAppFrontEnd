@@ -10,18 +10,15 @@ import LightBox from '../LightBox'
 import Footer from '../Footer/Footer'
 import Loading from "../Loading"
 
-
-
-
 const App = () => {
 
     return (
         <>
             <div style ={{}}>
             <Loading>
-            <Nav />
-            <Search />
-            {/* <div className="container">
+                <Nav />
+                <Search />
+                {/* <div className="container">
                     <Pages></Pages>
                 </div>
                 <BookLarge>
@@ -29,10 +26,10 @@ const App = () => {
                     <TestPage></TestPage>
                     <TestPage></TestPage>
                 </BookLarge> */}
-            <BookSmallGallery />
-            <FireVideo />
-            {/* <LightBox /> */}
-            <Footer />
+                <BookSmallGallery />
+                <FireVideo />
+                {/* <LightBox /> */}
+                <Footer />
             </Loading>
             </div>
         </>

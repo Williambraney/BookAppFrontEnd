@@ -33,35 +33,35 @@ const BookLarge = ({ book, author }) => {
 
                 <div style={
                     {
+                        display: "grid",
+                        gridTemplateRows: "auto 60% auto",
                         border: "1px solid #c2b5a3",
                         overflow: "hidden",
                         backgroundColor: "#fdfaf7",
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
+                        maxWidth: "100%",
+                        maxHeight: "100%",
                         alignItems: "center",
                         justifyContent: "center",
                         flexDirection: "column"
                     }
                 }>
-                    <p className="header">1</p>
+                    <p style={{ alignSelf: "center", justifySelf: "center" }} className="header">1</p>
 
-                    <figure className="img--book">                        
-                            <img src={process.env.PUBLIC_URL + props.book.image_path} alt="logo" className="logo" />                        
-                    </figure>
+                    <img style={{ height: "100%", width: "100%", objectFit: "contain" }} src={process.env.PUBLIC_URL + props.book.image_path} alt="logo" className="logo" />
 
-                    <Container fluid="md" style={{ width: 80 + "%" }}>
+                    <Container fluid="md" style={{ width: 90 + "%" }}>
                         <Row>
                             <Col>
                                 <p className="type">Title: {props.book.title}</p>
                                 <p className="binding">By: {props.book.author.name}</p>
                                 <p className="publisher">Publication Date: {props.book.publication_date}</p>
+                            </Col>
+                            <Col>
                                 <p className="pages">Pages: {props.book.pages}</p>
                                 <p className="pubdate">RRP: £{props.book.rrp}</p>
                             </Col>
                         </Row>
-                    </Container>
-                    <p className="footer">1</p>
+                    </Container>                    
                 </div>
 
 
