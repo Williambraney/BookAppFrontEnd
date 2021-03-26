@@ -1,23 +1,38 @@
+import BookSmall from "../BookSmall/"
+import BookSmallGallery from "../BookSmallGallery/"
+import BookLarge from "../BookLarge"
+import TestPage from "../TestPage"
+import Nav from "../Nav"
+import Search from "../Search"
+import Pages from '../Pages'
+import FireVideo from "../FireVideo/FireVideo"
+import LightBox from '../LightBox'
+import Footer from '../Footer/Footer'
+import Loading from "../Loading"
 
+const App = () => {
 
-const App =() => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-        </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-        </a>
-            </header>
-        </div>
-    );
-}
+        <>
+            <Loading>
+                <Nav />
+                <Search />
+                {/* <div className="container">
+                    <Pages></Pages>
+                </div>
+                <BookLarge>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                </BookLarge> */}
+                <BookSmallGallery />
+                <FireVideo />
+                {/* <LightBox /> */}
+                <Footer />
+            </Loading>
+        </>
+    )
+};
+
 
 export default App;
