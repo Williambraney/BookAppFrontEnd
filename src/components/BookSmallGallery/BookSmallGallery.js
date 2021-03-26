@@ -34,9 +34,9 @@ const BookSmallGallery = ({ books }) => {
                         <div onClick={() => {
                             setSelectedBook(index)
                             setToggler(!toggler)
-                        }} key={index} className="cardContainer" style={{ backgroundColor: colors.lightGrey }}>
+                        }} key={index} className="cardContainer">
                             <Card className="card">
-                                <Card.Img className="image" variant="top" src={book.image_path} />
+                                <Card.Img className="image" variant="top" src={book.image_path} alt={book.image_name} />
 
                                
 
