@@ -16,6 +16,7 @@
     @for $i from 1 to 200 {
         &:nth-child(#{$i}){ // target nth child of description-word
             animation: appear 0s #{$i/50}s forwards;
+            
         }
     }
 }

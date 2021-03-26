@@ -7,6 +7,7 @@ import FireVideo from "../FireVideo/FireVideo";
 import { useState, getState } from "react";
 
 
+
 const Search = ({ searchBooks, searchTerm }) => {
 
     let [searchWord, setSearchTerm] = useState("");
@@ -35,12 +36,12 @@ const Search = ({ searchBooks, searchTerm }) => {
     }
 
     const quote = {
-        backgroundColor: "Transparent",
         width: 70 + "vw",
-        color: "white",
+        color: "black",
         fontSize: 1.7 + "rem",
         border: "none",
         fontFamily: "Arial-ItalicMT",
+        backgroundColor: "rgba(255,255,255,0.5)",
     }
 
     const logo = {
@@ -49,7 +50,7 @@ const Search = ({ searchBooks, searchTerm }) => {
 
     const authorBook = {
         fontWeight: "bold",
-        color: "green"
+        color: "blue",
     }
 
 
@@ -61,7 +62,7 @@ const Search = ({ searchBooks, searchTerm }) => {
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
-                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
+                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",}}>
                     <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
                     <Form.Text className="text-muted" style={authorBook}>
                         by J.K. Rowling
