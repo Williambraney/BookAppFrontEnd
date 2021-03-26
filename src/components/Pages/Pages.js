@@ -46,7 +46,8 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            flexDirection: "column"
+                            flexDirection: "column",
+                            marginTop: "20px"
                            }
                        }
                     >PAGE HEADER - 1</p>
@@ -62,13 +63,15 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                                 }
 
                             }>
-                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881._SY475_.jpg" alt="logo" class="logo"/>
+                        <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1474169725l/15881._SY475_.jpg" alt="logo" className="logo"/>
                     </figure>
                 </div>
 
                 <div style={
                     {
                         width: "60%",
+                        height: "40%",
+                        lineHeight: "normal"
                     }
                 }>
                     <p className="type">Type:&nbsp;{
@@ -124,7 +127,11 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                         books.data.books[0].author
                     }</p>
 
-                    <p className="review">{
+                    <p className="review" style={
+                        {
+                            height: "620px"
+                        }
+                    }>{
                         books.data.books[0].synopsis
                     }</p>
                     <p className="footer" style={
@@ -189,10 +196,11 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                         {
                             marginTop: "20px",
                             marginLeft: "5px",
+                            height: "430px",
                         }
                     }>About the Author
                     {
-                        description.split(' ').map(word => (<span className="description-word">{word} </span>))
+                        description.split(' ').map((word, i) => (<span key={i} className="description-word">{word} </span>))
                     }
                     </p>
 
@@ -215,6 +223,7 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                     height: "800px",
                     }
                 }>
+                
                      <p className="author-name" 
                        style={
                             {
@@ -222,8 +231,12 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                             }
                     }>Biography</p>
 
-                    <p className="bio">{
-                        bioDescription.split(' ').map(word => (<span className="bio-description-word">{word} </span>))
+                    <p className="bio" style={
+                        {
+                            height: "660px",
+                        }
+                    }>{
+                        bioDescription.split(' ').map((word, i) => (<span key={i} className="bio-description-word">{word} </span>))
                     }
                     </p>
 
@@ -235,7 +248,7 @@ J.K. Rowling also writes novels for adults. The Casual Vacancy was published in 
                             flexDirection: "column"
                            }
                        }>4</p>
-                    
+                
             </div>
             
         </>
