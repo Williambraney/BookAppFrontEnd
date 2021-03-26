@@ -35,4 +35,11 @@ export const setSearchTerm = (data) => {
     }
 }
 
+export const getQuote = (data) => {
+    return {
+        type: "GET_QUOTE",
+        quotes: data
+    }
+}
+
 // this sets up the action 

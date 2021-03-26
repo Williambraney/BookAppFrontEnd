@@ -17,20 +17,22 @@ const App = () => {
 
     return (
         <>
-                <Nav />
-                <Search />
-                <div className="container">
-                    <Pages></Pages>
-                </div>
-                <BookLarge>
-                    <TestPage></TestPage>
-                    <TestPage></TestPage>
-                    <TestPage></TestPage>
-                </BookLarge>
-                <BookSmallGallery />
-                <FireVideo  />
-                <LightBox />
-                <Footer />
+                <Loading>
+                    <Nav />
+                    <Search />
+                    <div className="container">
+                        <Pages></Pages>
+                    </div>
+                    <BookLarge>
+                        <TestPage></TestPage>
+                        <TestPage></TestPage>
+                        <TestPage></TestPage>
+                    </BookLarge>
+                    <BookSmallGallery />
+                    <FireVideo  />
+                    <LightBox />
+                    <Footer />
+                </Loading>
         </>
     )
 };

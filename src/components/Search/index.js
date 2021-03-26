@@ -1,18 +1,21 @@
 import { connect } from "react-redux";
 import Search from "./Search";
-import { searchBooks } from "../../data/actions/api"
-import { setSearchTerm } from "../../data/actions/state"
+import { randomQuote, searchBooks } from "../../data/actions/api";
+import { setSearchTerm, getQuote } from "../../data/actions/state";
 
 const mapStateToProps = state => {
     return {
-        searchTerm: state.searchTerm
+        searchTerm: state.searchTerm,
+        quotation: state.quote.text,
+        author: state.quote.author,
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         searchBooks: (data) => dispatch(searchBooks(data)),
-        updateSearchTerm: (data) => dispatch(setSearchTerm(data))
+        updateSearchTerm: (data) => dispatch(setSearchTerm(data)),
+        changeQuote: (data) => dispatch(randomQuote(data)),
     }
 }
 
