@@ -17,6 +17,7 @@ const App = () => {
 
     return (
         <>
+            <div style ={{}}>
             <Loading>
             <Nav />
             <Search />
@@ -33,6 +34,7 @@ const App = () => {
             {/* <LightBox /> */}
             <Footer />
             </Loading>
+            </div>
         </>
     )
 };
