@@ -7,7 +7,6 @@ import Search from "../Search"
 import Pages from '../Pages'
 import FireVideo from "../FireVideo/FireVideo"
 import LightBox from '../LightBox'
-import Loading from '../Loading'
 import Footer from '../Footer/Footer'
 
 
@@ -17,22 +16,21 @@ const App = () => {
 
     return (
         <>
-                <Loading>
-                    <Nav />
-                    <Search />
-                    <div className="container">
-                        <Pages></Pages>
-                    </div>
-                    <BookLarge>
-                        <TestPage></TestPage>
-                        <TestPage></TestPage>
-                        <TestPage></TestPage>
-                    </BookLarge>
-                    <BookSmallGallery />
-                    <FireVideo  />
-                    <LightBox />
-                    <Footer />
-                </Loading>
+                
+            <Nav />
+            <Search />
+            {/* <div className="container">
+                    <Pages></Pages>
+                </div>
+                <BookLarge>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                    <TestPage></TestPage>
+                </BookLarge> */}
+            <BookSmallGallery />
+            <FireVideo />
+            {/* <LightBox /> */}
+            <Footer />
         </>
     )
 };
