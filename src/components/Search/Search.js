@@ -49,7 +49,8 @@ const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => 
 
     const authorBook = {
         fontWeight: "bold",
-        color: "green"
+        color: "green",
+        fontSize: 1.7 + "rem",
     }
 
 
