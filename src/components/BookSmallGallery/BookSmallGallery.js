@@ -26,7 +26,7 @@ const BookSmallGallery = ({ books, bookMode }) => {
 
     return (
         <>
-            <div className="bookGallery">
+            <div className="bookGallery" style={{minHeight: "36vh"}}>
                 {bookMode ?
                     books.map((book, index) => {
 

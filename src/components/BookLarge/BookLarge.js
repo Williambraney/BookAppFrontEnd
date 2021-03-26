@@ -49,7 +49,7 @@ const BookLarge = ({ book, author }) => {
 
                     <img style={{ height: "100%", width: "100%", objectFit: "contain" }} src={process.env.PUBLIC_URL + props.book.image_path} alt="logo" className="logo" />
 
-                    <Container fluid="md" style={{ width: 100 + "%" }}>
+                    <Container fluid="md" style={{ width: 90 + "%" }}>
                         <Row>
                             <Col>
                                 <p className="type">Title: {props.book.title}</p>
