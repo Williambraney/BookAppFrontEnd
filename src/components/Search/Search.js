@@ -7,7 +7,10 @@ import FireVideo from "../FireVideo/FireVideo";
 import { useState, getState } from "react";
 
 
+
+
 const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => {
+
 
     let [searchWord, setSearchTerm] = useState("");
 
@@ -35,12 +38,12 @@ const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => 
     }
 
     const quote = {
-        backgroundColor: "Transparent",
         width: 70 + "vw",
-        color: "white",
+        color: "black",
         fontSize: 1.7 + "rem",
         border: "none",
         fontFamily: "Arial-ItalicMT",
+        backgroundColor: "rgba(255,255,255,0.5)",
     }
 
     const logo = {
@@ -62,8 +65,10 @@ const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => 
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
+
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
                     <Button onClick={ changeQuote } className="button-style" style={quote}>{quotation}</Button>
+
                     <Form.Text className="text-muted" style={authorBook}>
                         {author}
                         </Form.Text>
