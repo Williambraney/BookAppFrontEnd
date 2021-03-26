@@ -1,6 +1,7 @@
 const initial = {   
     loaded: false, 
     searchTerm: "",
+    bookMode: true,
     displayBook: {},
     book: {},
     author: {},
