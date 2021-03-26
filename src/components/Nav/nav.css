@@ -1,0 +1,8 @@
+.nav-button {
+    transition: 0.5s;
+}
+
+.nav-button:hover {
+    transform: scale(1.1) rotate(360deg); /* will grow by 10% */
+}
+

@@ -7,9 +7,8 @@ import Search from "../Search"
 import Pages from '../Pages'
 import FireVideo from "../FireVideo/FireVideo"
 import LightBox from '../LightBox'
-import Loading from '../Loading'
-
-
+import Footer from '../Footer/Footer'
+import Loading from "../Loading"
 
 const App = () => {
 
@@ -18,17 +17,18 @@ const App = () => {
             <Loading>
                 <Nav />
                 <Search />
-                <div className="container">
+                {/* <div className="container">
                     <Pages></Pages>
                 </div>
                 <BookLarge>
                     <TestPage></TestPage>
                     <TestPage></TestPage>
                     <TestPage></TestPage>
-                </BookLarge>
+                </BookLarge> */}
                 <BookSmallGallery />
-                <FireVideo  />
-                <LightBox />
+                <FireVideo />
+                {/* <LightBox /> */}
+                <Footer />
             </Loading>
         </>
     )

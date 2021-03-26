@@ -1,5 +1,5 @@
 import axios from '../../axios'
-import { loadBook, loadBooks, loadAuthor, loadAuthors } from './state'
+import { loadBook, loadBooks, loadAuthor, loadAuthors, getQuote } from './state'
 
 export const getBook = id => {
     return (dispatch) => {
@@ -17,6 +17,16 @@ export const getBooks = () => {
     }
 }
 
+export const searchBooks = (searchTerm) => {
+    console.log(searchTerm);
+    return (dispatch) => {
+        axios.get(`/books/search/${searchTerm}`).then(({ data }) => {
+            console.log(data);
+            dispatch(loadBooks([...data.data]))
+        })
+    }
+}
+
 export const getAuthor = id => {
     return (dispatch) => {
         axios.get(`/author/${id}`).then(({ data }) => {
@@ -29,6 +39,14 @@ export const getAuthors = () => {
     return (dispatch) => {
         axios.get('/authors').then(({ data }) => {
             dispatch(loadAuthors(data.data))
+        })
+    }
+}
+
+export const randomQuote = () => {
+    return (dispatch) => {
+        axios.get("/quotes").then(({ data }) => {
+            dispatch(getQuote(data.data))
         })
     }
 }

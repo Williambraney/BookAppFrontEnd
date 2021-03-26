@@ -28,4 +28,31 @@ export const setLB = () => {
     }
 }
 
+export const setSearchTerm = (data) => {
+    return {
+        type: "SET_SEARCH_TERM",
+        searchTerm: data
+    }
+}
+
+
+export const getQuote = (data) => {
+    return {
+        type: "GET_QUOTE",
+        quotes: data
+    }
+}
+
+export const setAuthorMode = () => {
+    return {
+        type: "SET_AUTHOR_MODE",        
+    }
+}
+
+export const setBookMode = () => {
+    return {
+        type: "SET_BOOK_MODE",        
+    }
+}
+
 // this sets up the action 

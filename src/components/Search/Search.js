@@ -3,10 +3,22 @@ import orangeBackground from "../../assets/orange-watercolor.png"
 import hoppers from "../../assets/hoppers.png"
 import { Button, Form } from "react-bootstrap"
 import colors from "../../colors.json"
-import fireVideo from "../FireVideo/FireVideo";
+import FireVideo from "../FireVideo/FireVideo";
+import { useState, getState } from "react";
 
-const Search = () => {
 
+
+
+const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => {
+
+
+    let [searchWord, setSearchTerm] = useState("");
+
+    const handleSearchTerm = (e) => {
+        const newValue = e.currentTarget.value;
+        setSearchTerm(newValue);
+        searchBooks(newValue);
+    };
 
     const searchWrapper = {
         display: "flex",
@@ -18,7 +30,7 @@ const Search = () => {
         height: 300 + "px",
         // backgroundImage: `url(${orangeBackground})`,
         backgroundSize: 100 + "%",
-        // backgroundRepeat: "cover"
+        backgroundRepeat: "cover",
     }
 
     const searchBar = {
@@ -26,32 +38,39 @@ const Search = () => {
     }
 
     const quote = {
-        backgroundColor: "Transparent",
         width: 70 + "vw",
         color: "black",
         fontSize: 1.7 + "rem",
         border: "none",
         fontFamily: "Arial-ItalicMT",
+        backgroundColor: "rgba(255,255,255,0.5)",
     }
 
     const logo = {
         width: 30 + "px",
     }
 
+    const authorBook = {
+        fontWeight: "bold",
+        color: "green",
+        fontSize: 1.7 + "rem",
+    }
+
+
+
     return (
         <div style={searchWrapper}>
-            <fireVideo />
+            <FireVideo />
             <Form style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
-                    <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." />
+                    <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
-                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-                    <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
-                    <Form.Text className="text-muted">
-                        by J.K. Rowling
-                        </Form.Text>
-                    <Form.Text className="text-muted">
-                        Harry Potter and the Chamber of Secrets
+
+                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
+                    <Button onClick={ changeQuote } className="button-style" style={quote}>{quotation}</Button>
+
+                    <Form.Text className="text-muted" style={authorBook}>
+                        {author}
                         </Form.Text>
                 </Form.Group>
             </Form>
