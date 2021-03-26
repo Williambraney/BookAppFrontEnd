@@ -40,6 +40,8 @@ export const getQuote = (data) => {
     return {
         type: "GET_QUOTE",
         quotes: data
+    }
+}
 
 export const setAuthorMode = () => {
     return {

@@ -8,6 +8,7 @@ import Pages from '../Pages'
 import FireVideo from "../FireVideo/FireVideo"
 import LightBox from '../LightBox'
 import Footer from '../Footer/Footer'
+import Loading from "../Loading"
 
 
 
@@ -16,7 +17,7 @@ const App = () => {
 
     return (
         <>
-                
+            <Loading>
             <Nav />
             <Search />
             {/* <div className="container">
@@ -31,6 +32,7 @@ const App = () => {
             <FireVideo />
             {/* <LightBox /> */}
             <Footer />
+            </Loading>
         </>
     )
 };
