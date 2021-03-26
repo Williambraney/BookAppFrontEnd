@@ -79,6 +79,10 @@ const BookSmallGallery = ({ books, bookMode }) => {
                 // toggler = bookindex < -1
                 // using state outside of map to store index, then pass in the book to booklarge by index
                 toggler={toggler}
+                // onClose={() => {
+                //     setSelectedBook(-1)
+                //     setToggler(false)
+                // }}
                 sources={[
                     <div style={{ width: "1100px", height: "800px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                         <BookLarge book={books[selectedBook]} />
