@@ -1,10 +1,10 @@
 import test from "../../assets/test.png"
-import hoppers from "../../assets/hoppers.png"
+import hoppers from "../../assets/hoppers2.svg"
 import { Button } from "react-bootstrap"
 import colors from "../../colors.json"
 import './nav.css'
 
-const Nav = () => {
+const Nav = ({ setBookMode, setAuthorMode }) => {
 
     const navStyle = {
         display: "flex",
@@ -44,12 +44,12 @@ const Nav = () => {
     return (
         <>
             <div style={logoStyle}>
-                <p style={{ marginBottom: 4 + "px", marginRight: 5 + "px", padding: 0 }}>Hoppers</p>
+                <p style={{ marginLeft: 5 + "px", marginBottom: 4 + "px", marginRight: 5 + "px", padding: 0 }}>TheBookHoppers</p>
                 <img style={logo} src={hoppers} alt="hoppers icon"></img>
             </div>
             <div style={navStyle}>
-                <Button className="nav-button" style={buttonStyle}>Books</Button>
-                <Button className="nav-button" style={buttonStyle}>Authors</Button>
+                <Button className="nav-button" onClick={setBookMode} style={buttonStyle}>Books</Button>
+                <Button className="nav-button" onClick={setAuthorMode} style={buttonStyle}>Authors</Button>
             </div>
         </>
     )

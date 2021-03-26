@@ -8,7 +8,9 @@ import { useState, getState } from "react";
 
 
 
-const Search = ({ searchBooks, searchTerm }) => {
+
+const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => {
+
 
     let [searchWord, setSearchTerm] = useState("");
 
@@ -50,7 +52,8 @@ const Search = ({ searchBooks, searchTerm }) => {
 
     const authorBook = {
         fontWeight: "bold",
-        color: "blue",
+        color: "green",
+        fontSize: 1.7 + "rem",
     }
 
 
@@ -62,13 +65,12 @@ const Search = ({ searchBooks, searchTerm }) => {
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
-                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",}}>
-                    <Button className="button-style" style={quote}>"Hearing voices no-one else can hear isn't a good sign, not even in the wizarding world."</Button>
+
+                <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
+                    <Button onClick={ changeQuote } className="button-style" style={quote}>{quotation}</Button>
+
                     <Form.Text className="text-muted" style={authorBook}>
-                        by J.K. Rowling
-                        </Form.Text>
-                    <Form.Text className="text-muted" style={authorBook}>
-                        Harry Potter and the Chamber of Secrets
+                        {author}
                         </Form.Text>
                 </Form.Group>
             </Form>
