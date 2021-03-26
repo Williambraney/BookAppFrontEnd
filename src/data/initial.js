@@ -6,7 +6,11 @@ const initial = {
     book: {},
     author: {},
     books: [],
-    authors: []
+    authors: [],
+    quote: {
+        text: "",
+        author: "",
+    },
 }
 
 export default initial
