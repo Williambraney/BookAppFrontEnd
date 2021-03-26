@@ -34,11 +34,11 @@ const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => 
     }
 
     const searchBar = {
-        width: 70 + "vw"
+        width: 70 + "vw",
     }
 
     const quote = {
-        width: 70 + "vw",
+        width: 55 + "vw",
         color: "black",
         fontSize: 1.7 + "rem",
         border: "none",
@@ -63,11 +63,12 @@ const Search = ({ searchBooks, searchTerm, quotation, changeQuote, author }) => 
             <FireVideo />
             <Form style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }} controlId="search">
+                    
                     <Form.Control style={searchBar} type="text" placeholder="Discover your next great adventure..." value={searchWord} onChange={handleSearchTerm} />
                 </Form.Group>
 
                 <Form.Group style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" ,}}>
-                    <Button onClick={ changeQuote } className="button-style" style={quote}>{quotation}</Button>
+                    <Button onClick={ changeQuote } className="button-style" style={quote}>"{quotation}"</Button>
 
                     <Form.Text className="text-muted" style={authorBook}>
                         {author}
